@@ -121,7 +121,12 @@ const PORTFOLIO_DATA={
  roles:["Electrical Engineering Innovator · IIT Kanpur","Devbhoomi Rashtriya Ratna National Awardee","United Nations Geneva Delegate","NTU Singapore i-SEA Fellow 2026","Civic-Tech & Edge-AI Architect"],
  quote:"“From passion to purpose – Recognized for driving change that matters.”",
  greeting:"Welcome to the official digital command center of Aravind K. T. — Electrical Engineering innovator at IIT Kanpur, Devbhoomi Rashtriya Ratna National Awardee, and United Nations Geneva Delegate. Explore the engineering blueprints, global diplomacy fellowships, and multimedia evidence vault below.",
-counters:[{n:13,p:"",s:" Lakh+",l:"Participants · My Bharat Budget Quest 2026 National Finalist"},{n:50,p:"Top ",s:"",l:"Asia-Pacific Youth Leaders · Seoul"},{n:9,p:"",s:"+",l:"Global summits & fellowships: Geneva, Singapore, Paris, Seoul, Tokyo, Bangkok, Milan, Budapest"},{n:4,p:"",s:"",l:"Flagship hardware & AI-GIS systems"}],
+achievements:[
+  {t:"Devbhoomi National Awardee",d:"ISRHE Govt of India NITI Aayog Honoree"},
+  {t:"UN Geneva Delegate",d:"17th Session HRC Social Forum, Palais des Nations"},
+  {t:"NTU Singapore i-SEA Fellow",d:"Wee Kim Wee School of Communication & Information"},
+  {t:"National Policy & Tech Innovator",d:"IIT Kanpur Electrical Engineering & Civic-Tech"}
+ ],
  buttons:[["⚡ Launch BlueHawk Live App","https://bluehawk-civic-nexus.streamlit.app"],["🦇 Launch EchoSense Live Site","https://kt2141.github.io/EchoSense-Biomimetic-Design"],["📂 Open “EVIDENCES” Drive Vault",EVIDENCES_DRIVE_URL],["📄 View Official CV & Certificates","modal:docs/cv-and-certificates.pdf"],["📰 Read TIMES SPHERE Magazine Feature",MAG]],
  fellowships:[
   {c:"Fellowship",y:"2026",t:"NTU Singapore i-SEA Fellow",o:"Nanyang Technological University · Wee Kim Wee School / IN-cube",d:"Funded hybrid fellowship (Nov–Dec 2026) with S$500 stipend, Holiday Inn Express Clarke Quay stay and round-trip airfare."},
@@ -230,7 +235,7 @@ function openVid(v){let h;if(/REPLACE/.test(v.src))h=`<p class="sub">Add this vi
 /* hero */
 $("#hTag").textContent=D.aka;$("#hName").textContent=D.name;$("#hSub").textContent=D.sub;$("#quote").textContent=D.quote;$("#yr").textContent=new Date().getFullYear();
 let ri=0;const rl=$("#role");(function r(){rl.style.opacity=0;setTimeout(()=>{rl.textContent="▸ "+D.roles[ri++%D.roles.length];rl.style.opacity=1},350);setTimeout(r,2800)})();rl.style.transition="opacity .35s";
-$("#cnts").innerHTML=D.counters.map(c=>`<div class="glass cnt"><b data-n="${c.n}" data-p="${c.p||""}" data-s="${c.s||""}">0</b><span>${c.l}</span></div>`).join("");
+$("#cnts").innerHTML=D.achievements.map(a=>`<div class="glass cnt" style="padding:20px;text-align:center"><b style="font-size:1.1rem;color:#fde68a;margin-bottom:4px;display:block">${a.t}</b><span style="font-size:13px;color:#9ca3af">${a.d}</span></div>`).join("");
 $("#hBtns").innerHTML=D.buttons.map((b,i)=>`<button class="btn ${i%2?"c":""}" data-u="${b[1]}">${b[0]}</button>`).join("");
 $("#hBtns").onclick=e=>{const b=e.target.closest("button");if(b)go(b.dataset.u)};
 
@@ -258,7 +263,7 @@ $("#mC").onclick=e=>{const v=e.target.closest("[data-v]"),d=e.target.closest("[d
 
 /* gallery */
 const ph=l=>"data:image/svg+xml;utf8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f59e0b" stop-opacity=".35"/><stop offset="1" stop-color="#06b6d4" stop-opacity=".3"/></linearGradient></defs><rect width="400" height="300" fill="#0a0f1e"/><rect width="400" height="300" fill="url(#g)"/><text x="200" y="140" fill="#fde68a" font-size="64" text-anchor="middle" font-family="serif">AKT</text><text x="200" y="185" fill="#cbd5e1" font-size="15" text-anchor="middle" font-family="sans-serif">${l}</text></svg>`);
-chips($("#gF"),D.gcats,c=>{const k=D.gcats.indexOf(c);$("#gG").innerHTML=D.gallery.filter(g=>!k||g[2]===k).map(g=>{const alt=`Aravind K. T. (Aravind Koolagurki Thimmarayappa) - ${g[1]}`,s=`images/${g[0]}.jpg`;return `<div class="glass gal card"><img src="${s}" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='${ph("Upload "+g[0]+".jpg")}'" data-s="${s}" data-a="${alt}"><span>${g[1]}</span></div>`}).join("")});
+chips($("#gF"),D.gcats,c=>{const k=D.gcats.indexOf(c);$("#gG").innerHTML=D.gallery.filter(g=>!k||g[2]===k).map(g=>{const alt=`Aravind K. T. (Aravind Koolagurki Thimmarayappa) - ${g[1]}`;return `<div class="glass gal card"><img src="images/${g[0]}.jpg" alt="${alt}" loading="lazy" onerror="this.onerror=function(){this.onerror=function(){this.src='images/${g[0]}.png'};this.src='images/${g[0]}.jpeg'};" data-s="images/${g[0]}.jpg" data-a="${alt}"><span>${g[1]}</span></div>`}).join("")});
 $("#gG").onclick=e=>{const i=e.target.closest("img");if(i)modal(i.dataset.a,`<img src="${i.src}" alt="${i.dataset.a}">`)};
 
 /* about + footer */
