@@ -74,8 +74,8 @@ footer a{color:#fde68a;margin:0 10px;display:inline-block}
   <p class="tag">Official Digital Command Center</p>
   <h1 style="font-size:clamp(2rem,8vw,4.5rem);color:#fde68a">ARAVIND K. T.</h1>
   <p class="sub">Engineer · Policy Leader · Global Delegate</p>
-  <button class="btn" id="enterV">🎙️ Enter with Voice &amp; Sound</button>
-  <button class="btn c" id="enterS">Enter Silently</button>
+  <button class="btn" id="enterV" onclick="document.getElementById('intro').style.opacity=0;setTimeout(function(){document.getElementById('intro').remove();try{speechSynthesis.speak(new SpeechSynthesisUtterance(PORTFOLIO_DATA.greeting))}catch(e){}},500);">🎙️ Enter with Voice &amp; Sound</button>
+<button class="btn c" id="enterS" onclick="document.getElementById('intro').style.opacity=0;setTimeout(function(){document.getElementById('intro').remove();},500);">Enter Silently</button>
 </div></div>
 
 <div id="bar">
