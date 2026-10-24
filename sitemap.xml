@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://kt2141.github.io/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-iit-kanpur-portrait.jpg</image:loc>
+      <image:title>Aravind K. T. (Aravind Koolagurki Thimmarayappa) - IIT Kanpur Portrait</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-devbhoomi-rashtriya-ratna-award.jpg</image:loc>
+      <image:title>Aravind K. T. receiving the Devbhoomi Rashtriya Ratna Puraskar 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-press-meet.jpg</image:loc>
+      <image:title>Aravind K. T. at Press Meet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-un-geneva-delegate.jpg</image:loc>
+      <image:title>Aravind K. T. - UN Social Forum Delegate at Palais des Nations, Geneva</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-hawk-rover-lab.jpg</image:loc>
+      <image:title>Aravind K. T. with H.A.W.K. Autonomous Rover at IIT Kanpur Lab</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-echosense-prototype.jpg</image:loc>
+      <image:title>Aravind K. T. with EchoSense Biomimetic Haptic Wearable Prototype</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-family-kolar.jpg</image:loc>
+      <image:title>Aravind K. T. with Family in Kolar, Karnataka</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kt2141.github.io/images/aravind-k-t-personal-portrait.jpg</image:loc>
+      <image:title>Aravind K. T. (Aravind Koolagurki Thimmarayappa) Personal Portrait</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kt2141.github.io/docs/cv-and-certificates.pdf</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kt2141.github.io/docs/bluehawk-design-compendium.pdf</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kt2141.github.io/docs/echosense-final-presentation.pdf</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
