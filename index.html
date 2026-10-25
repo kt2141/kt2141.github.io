@@ -192,16 +192,16 @@ videos:[
  links:[["Instagram @aravind.__reddy","https://www.instagram.com/aravind.__reddy?igsh=bGpuNmNsYWpnNHd2&utm_source=qr","📸"],["ICSC Official Ambassador Profile","https://icscompetition.org/en/aravit","💻"],["TIMES SPHERE Magazine PDF",MAG,"📰"],["Legacy Google Site","https://sites.google.com/view/aravind-k-t-iitk/","🌐"],["GitHub @kt2141","https://github.com/kt2141","🐙"],["Drive “EVIDENCES” Vault",EVIDENCES_DRIVE_URL,"📂"]],
  gcats:["All","Award Ceremonies & Press Meets","Global Summits & Delegations","IIT Kanpur & Robotics Lab","Personal & Family"],
  gallery:[
-  ["aravind-k-t-devbhoomi-rashtriya-ratna-award.jpg","Receiving Devbhoomi Rashtriya Ratna Puraskar 2025 on stage",1],
+  ["aravind-k-t-devbhoomi-rashtriya-ratna-award.jpeg","Receiving Devbhoomi Rashtriya Ratna Puraskar 2025 on stage",1],
   ["aravind-k-t-press-meet.jpeg","Media press conference and interview during national award ceremony",1],
   ["aravind-k-t-times-sphere-feature.png","Featured profile page in ISRHE Times Sphere Magazine (July 2025)",1],
   ["aravind-k-t-echosense-prototype.png","EchoSense biomimetic haptic wearable exploded CAD architecture",3],
-  ["aravind-k-t-hawk-rover-lab.png","H.A.W.K. autonomous edge-AI tracking rover built at IIT Kanpur",3],
-  ["aravind-k-t-iit-kanpur-portrait.jpg","Campus portrait at IIT Kanpur",3],
-  ["aravind-k-t-suit-portrait.jpg","Professional suit portrait at leadership venue",1],
-  ["aravind-k-t-family-kolar.jpg","With family celebration in Kolar, Karnataka",4],
-  ["aravind-k-t-personal-portrait.JPG","Casual portrait during institutional engagement",4],
-  ["aravind-k-t-coastal-view.jpg","Exploring coastal landscape during travels",4]]
+  ["aravind-k-t-hawk rover lab.png","H.A.W.K. autonomous edge-AI tracking rover built at IIT Kanpur",3],
+  ["aravind-k-t-iit-kanpur-portrait.JPG","Campus portrait at IIT Kanpur",3],
+  ["aravind-k-t-suit-portrait.jpeg","Professional suit portrait at leadership venue",1],
+  ["aravind-k-t-family-kolar.jpeg","With family celebration in Kolar, Karnataka",4],
+  ["aravind-k-t-personal-portrait.jpeg","Casual portrait during institutional engagement",4],
+  ["aravind-k-t-coastal-view.jpeg","Exploring coastal landscape during travels",4]]
 };
 /* ======================== ENGINE (no need to edit) ======================== */
 const D=PORTFOLIO_DATA,$=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
@@ -263,7 +263,7 @@ $("#mC").onclick=e=>{const v=e.target.closest("[data-v]"),d=e.target.closest("[d
 
 /* gallery */
 const ph=l=>"data:image/svg+xml;utf8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f59e0b" stop-opacity=".35"/><stop offset="1" stop-color="#06b6d4" stop-opacity=".3"/></linearGradient></defs><rect width="400" height="300" fill="#0a0f1e"/><rect width="400" height="300" fill="url(#g)"/><text x="200" y="140" fill="#fde68a" font-size="64" text-anchor="middle" font-family="serif">AKT</text><text x="200" y="185" fill="#cbd5e1" font-size="15" text-anchor="middle" font-family="sans-serif">${l}</text></svg>`);
-chips($("#gF"),D.gcats,c=>{const k=D.gcats.indexOf(c);$("#gG").innerHTML=D.gallery.filter(g=>!k||g[2]===k).map(g=>{const alt=`Aravind K. T. (Aravind Koolagurki Thimmarayappa) - ${g[1]}`;return `<div class="glass gal card"><img src="images/${g[0]}" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='${ph("Missing Image")}'" data-s="images/${g[0]}" data-a="${alt}"><span>${g[1]}</span></div>`}).join("")});
+chips($("#gF"),D.gcats,c=>{const k=D.gcats.indexOf(c);$("#gG").innerHTML=D.gallery.filter(g=>!k||g[2]===k).map(g=>{const alt=`Aravind K. T. (Aravind Koolagurki Thimmarayappa) - ${g[1]}`;return `<div class="glass gal card"><img src="images/${g[0]}" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='${ph("Image")}'" data-s="images/${g[0]}" data-a="${alt}"><span>${g[1]}</span></div>`}).join("")});
 $("#gG").onclick=e=>{const i=e.target.closest("img");if(i)modal(i.dataset.a,`<img src="${i.src}" alt="${i.dataset.a}">`)};
 
 /* about + footer */
